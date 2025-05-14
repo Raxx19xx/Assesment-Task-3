@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+</head>
+<body>
+<div class="content">
+<h1>Orders</h1>
+<table>
+<tr>
+<th>Date</th>
+<th>Quantity</th>
+</tr>
+
+{% for orders in allorders %}
+<tr>
+<td> {{ orders['date'] }}</td>
+<td> {{ orders['quantity'] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+</body>
+</html>

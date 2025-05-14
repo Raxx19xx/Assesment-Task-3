@@ -3,12 +3,12 @@ import sqlite3
 
 app = Flask(__name__)
 
-@app.route('/displayproducts', methods=['GET'])
-def displayProducts():
+@app.route('/displayorders', methods=['GET'])
+def displayOrders():
     conn = get_db_connection()
-    allproducts = conn.execute('SELECT * FROM products').fetchall()
+    allorders = conn.execute('SELECT * FROM orders').fetchall()
     conn.close()
-    return render_template('displayproducts.html', allproducts=allproducts)
+    return render_template('displayorders.html', allorders=allorders)
 
 def get_db_connection():
     conn = sqlite3.connect('mydb.db')
