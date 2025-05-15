@@ -1,0 +1,7 @@
+#Update Git with Your Latest Changes
+
+# 1. git add .
+
+# 2. git commit -m "(Whatever change you did)"
+
+# 3. git push origin main
