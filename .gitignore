@@ -1,0 +1,7 @@
+# Python virtual environment
+venv/
+.DS_Store # Mac-specific folder metadata, also good to ignore
+__pycache__/ # Python compiled bytecode
+*.pyc # Python compiled bytecode
+*.sqlite3 # Or whatever extension your SQLite database uses if it's dynamic
+mydb.db # Specifically ignore your database file

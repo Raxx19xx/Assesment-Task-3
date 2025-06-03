@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block title %}User Dashboard{% endblock %}
+{% block content %}
+<h2>Welcome {{ username }}!</h2>
+
+<!-- Show user mobile number -->
+<p><strong>Mobile:</strong> {{ mobile }}</p>
+
+<!-- Show user address -->
+<p><strong>Address:</strong> {{ address }}</p>
+
+<!-- Show user profile image if available -->
+{% if profile %}
+    <p><strong>Profile Image:</strong></p>
+    <img src="{{ url_for('static', filename='uploads/' + profile) }}" alt="Profile Image" width="150">
+{% else %}
+    <p>No profile image uploaded.</p>
+{% endif %}
+{% endblock %}

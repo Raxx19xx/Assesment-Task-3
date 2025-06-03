@@ -1,0 +1,20 @@
+<h2>Products</h2>
+<table border="1">
+<tr><th>Name</th><th>Stock</th><th>Price</th><th>Add to Cart</th></tr>
+{% for product in products %}
+<tr>
+    <td>{{ product['name'] }}</td>
+    <td>{{ product['stock_level'] }}</td>
+    <td>{{ product['cost'] }}</td>
+    <td>
+        {% if product['stock_level'] > 0 %}
+        <form action="{{ url_for('add_to_cart', product_id=product['id']) }}" method="post">
+            <input type="number" name="quantity" min="1" max="{{ product['stock_level'] }}" value="1">
+            <button type="submit">Add</button>
+        </form>
+        {% else %} Out of stock {% endif %}
+    </td>
+</tr>
+{% endfor %}
+</table>
+<a href="{{ url_for('cart') }}">View Cart</a>
