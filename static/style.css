@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 30px 25px;
+}
+
+/* Navigation Bar */
+nav {
+    margin-bottom: 24px;
+    background: #343a40;
+    padding: 12px 30px;
+    border-radius: 6px;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s;
+}
+
+nav a:hover {
+    color: #ffc107;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #343a40;
+    margin-top: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 25px 0;
+}
+
+/* Buttons */
+button, .btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.15s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #495057;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea {
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: border-color 0.15s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: #fafbfc;
+}
+
+th, td {
+    border: 1px solid #ececec;
+    padding: 12px 10px;
+    text-align: left;
+}
+
+th {
+    background: #f1f3f4;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Error and Success Messages */
+.error, .flash-error {
+    color: #fff;
+    background: #dc3545;
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.success, .flash-success {
+    color: #fff;
+    background: #28a745;
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Cart/Order Items */
+.cart-item, .order-item {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item:last-child, .order-item:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 35px;
+    text-align: center;
+    color: #888;
+    font-size: 0.95em;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .container {
+        padding: 12px 3vw;
+        margin: 10px 0;
+    }
+    nav {
+        padding: 10px 8px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    form {
+        max-width: 99vw;
+    }
+    table, th, td {
+        font-size: 0.97em;
+    }
+}

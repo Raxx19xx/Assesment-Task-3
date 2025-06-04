@@ -1,5 +1,8 @@
+{% extends 'layout.html' %}
+{% block title %}Products{% endblock %}
+{% block content %}
 <h2>Products</h2>
-<table border="1">
+<table>
 <tr><th>Name</th><th>Stock</th><th>Price</th><th>Add to Cart</th></tr>
 {% for product in products %}
 <tr>
@@ -18,3 +21,4 @@
 {% endfor %}
 </table>
 <a href="{{ url_for('cart') }}">View Cart</a>
+{% endblock %}

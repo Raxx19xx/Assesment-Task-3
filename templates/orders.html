@@ -1,3 +1,6 @@
+{% extends 'layout.html' %}
+{% block title %}Products{% endblock %}
+{% block content %}
 <h2>Your Orders</h2>
 
 {% if orders and orders|length > 0 %}
@@ -18,3 +21,4 @@
 {% endif %}
 
 <a href="{{ url_for('products') }}">Back to Products</a>
+{% endblock %}
